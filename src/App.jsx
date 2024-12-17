@@ -4,6 +4,7 @@ import ProjectList from "./components/ProjectList"
 import ProgressTracker from "./components/ProgressTracker"
 import AddProject from "./components/AddProject"
 import Login from "./components/Login"
+import { Analytics } from "@vercel/analytics/react"
 import PrivateRoute from "./components/PrivateRoute"
 import Header from "./components/Header"
 
@@ -27,37 +28,40 @@ const App = () => {
     }, [])
 
     return (
-        <Router>
-            <Header /> {/* Add the Header here */}
-            <Routes>
-                <Route path="/login" element={<Login />} />
-                <Route
-                    path="/"
-                    element={
-                        <PrivateRoute>
-                            <ProgressTracker />
-                        </PrivateRoute>
-                    }
-                />
-                <Route
-                    path="/progress"
-                    element={
-                        <PrivateRoute>
-                            <ProgressTracker />
-                        </PrivateRoute>
-                    }
-                />
-                <Route
-                    path="/add-project"
-                    element={
-                        <PrivateRoute>
-                            <AddProject />
-                        </PrivateRoute>
-                    }
-                />
-                <Route path="/leaderboard" element={<Leaderboard />} />\{" "}
-            </Routes>
-        </Router>
+        <div>
+            <Router>
+                <Header /> {/* Add the Header here */}
+                <Routes>
+                    <Route path="/login" element={<Login />} />
+                    <Route
+                        path="/"
+                        element={
+                            <PrivateRoute>
+                                <ProgressTracker />
+                            </PrivateRoute>
+                        }
+                    />
+                    <Route
+                        path="/progress"
+                        element={
+                            <PrivateRoute>
+                                <ProgressTracker />
+                            </PrivateRoute>
+                        }
+                    />
+                    <Route
+                        path="/add-project"
+                        element={
+                            <PrivateRoute>
+                                <AddProject />
+                            </PrivateRoute>
+                        }
+                    />
+                    <Route path="/leaderboard" element={<Leaderboard />} />\{" "}
+                </Routes>
+            </Router>
+            <Analytics />
+        </div>
     )
 }
 
