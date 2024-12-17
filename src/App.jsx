@@ -57,6 +57,14 @@ const App = () => {
                             </PrivateRoute>
                         }
                     />
+                    <Route
+                        path="*"
+                        element={
+                            <PrivateRoute>
+                                <ProgressTracker />
+                            </PrivateRoute>
+                        }
+                    />
                     <Route path="/leaderboard" element={<Leaderboard />} />\{" "}
                 </Routes>
             </Router>
