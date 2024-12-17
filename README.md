@@ -4,14 +4,14 @@
 
 The Task Management System is a platform designed to help organizations manage projects, assign tasks to candidates, and track their progress. It consists of two main parts:
 
-### 1. **Project Assignment **
+### 1. **Project Assignment**
 
 This allows candidates to:
 
 -   View projects that are assigned to them.
 -   Accept or decline assigned projects.
 
-### 2. **Progress Tracking and Scoring **
+### 2. **Progress Tracking and Scoring**
 
 This tracks the progress of each user on assigned tasks. It also calculates scores based on how many tasks the user completes, with real-time updates on their progress.
 
@@ -20,6 +20,9 @@ This tracks the progress of each user on assigned tasks. It also calculates scor
 -   Displays the progress dynamically on the front-end.
 -   Displays a leaderboard on the the front-end.
 
+## Deployment
+
+This app is deployed on vercel at - this [link](https://project-management-livid-eight.vercel.app) You can use it from this link.
 ## Key Features Walkthrough
 
 ### 1. **User Authentication**
