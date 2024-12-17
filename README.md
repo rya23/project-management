@@ -20,30 +20,34 @@ This tracks the progress of each user on assigned tasks. It also calculates scor
 -   Displays the progress dynamically on the front-end.
 -   Displays a leaderboard on the the front-end.
 
-## Features
+## Key Features Walkthrough
 
-### 1. Project Management
+### 1. **User Authentication**
 
--   Admin can assign projects to candidates.
--   Candidates can view, accept, and track projects.
--   Projects are tied to user accounts, ensuring that each user only sees their own assigned tasks.
+-   Users sign in using Google OAuth, facilitated by Firebase Authentication.
+-   After logging in, users are directed to the home page where they can view their assigned projects.
 
-### 2. Progress Tracking
+![index](static/image.png)
 
--   Each user's progress is tracked based on tasks they complete.
--   Scoring mechanism that assigns points for completed tasks.
--   A leaderboard to rank candidates based on their progress and completed tasks.
+### 2. **Project Assignment**
 
-### 3. Leaderboard
+-   Projects are displayed in the form of a list for users, showing details like title, description, and status.
+-   Users can accept projects, and the system updates their status accordingly.
+    ![project assignment](<static/Screenshot 2024-12-18 at 00-58-43 Project Management.png>)
 
--   Displays the ranking of users based on their completed tasks.
--   Current user is highlighted for easy identification.
--   Data is dynamically updated and shows the most recent changes.
+### 3. **Progress Tracking**
 
-### 4. Authentication and Authorization
+-   Completed tasks are tracked in real-time using Firebase Firestore.
+-   Users can view their progress and completed tasks dynamically.
 
--   Users sign in with Google authentication.
--   Firebase is used to handle authentication, database management, and data storage.
+### 4. **Leaderboard**
+
+-   The leaderboard page displays rankings based on completed tasks.
+-   The currently logged-in user is highlighted for easy recognition.
+-   The leaderboard is dynamically updated as users complete tasks.
+    ![leaderboard](<static/Screenshot 2024-12-18 at 00-57-38 Project Management.png>)
+
+    ![home](<static/Screenshot 2024-12-18 at 00-59-02 Project Management.png>)
 
 ## Technologies Used
 
@@ -84,28 +88,27 @@ This tracks the progress of each user on assigned tasks. It also calculates scor
 
     Visit `http://localhost:5173` in your browser to view the application.
 
-## Key Features Walkthrough
+## Features
 
-### 1. **User Authentication**
+### 1. Project Management
 
--   Users sign in using Google OAuth, facilitated by Firebase Authentication.
--   After logging in, users are directed to the home page where they can view their assigned projects.
+-   Admin can assign projects to candidates.
+-   Candidates can view, accept, and track projects.
+-   Projects are tied to user accounts, ensuring that each user only sees their own assigned tasks.
 
-![index](static/image.png)
+### 2. Progress Tracking
 
-### 2. **Project Assignment**
+-   Each user's progress is tracked based on tasks they complete.
+-   Scoring mechanism that assigns points for completed tasks.
+-   A leaderboard to rank candidates based on their progress and completed tasks.
 
--   Projects are displayed in the form of a list for users, showing details like title, description, and status.
--   Users can accept projects, and the system updates their status accordingly.
-![project assignment](<static/Screenshot 2024-12-18 at 00-58-43 Project Management.png>)
-### 3. **Progress Tracking**
+### 3. Leaderboard
 
--   Completed tasks are tracked in real-time using Firebase Firestore.
--   Users can view their progress and completed tasks dynamically.
+-   Displays the ranking of users based on their completed tasks.
+-   Current user is highlighted for easy identification.
+-   Data is dynamically updated and shows the most recent changes.
 
-### 4. **Leaderboard**
+### 4. Authentication and Authorization
 
--   The leaderboard page displays rankings based on completed tasks.
--   The currently logged-in user is highlighted for easy recognition.
--   The leaderboard is dynamically updated as users complete tasks.
-![leaderboard](<static/Screenshot 2024-12-18 at 00-57-38 Project Management.png>)
+-   Users sign in with Google authentication.
+-   Firebase is used to handle authentication, database management, and data storage.
